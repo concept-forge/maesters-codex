@@ -1,89 +1,25 @@
-import { useEffect, useRef, useState } from 'react'
-import L from 'leaflet'
-import 'leaflet/dist/leaflet.css'
+import { useState } from 'react'
 import locations from '../data/locations.json'
 
-function makeIcon(type) {
-  const color = type === 'dragon' ? '#e84545' : '#c9a227'
-  const border = type === 'dragon' ? '#8a1010' : '#8a6a10'
-  const glow = type === 'dragon' ? 'rgba(232,69,69,0.7)' : 'rgba(201,162,39,0.6)'
-  return L.divIcon({
-    className: '',
-    html: `<div style="
-      width: 12px; height: 12px;
-      background: ${color};
-      border: 2px solid ${border};
-      border-radius: 50%;
-      box-shadow: 0 0 8px ${glow};
-    "></div>`,
-    iconAnchor: [6, 6]
-  })
-}
-
 function MapPage() {
-  const mapRef = useRef(null)
-  const mapInstanceRef = useRef(null)
-  const markersRef = useRef([])
   const [selected, setSelected] = useState(null)
   const [filter, setFilter] = useState('all')
 
-  useEffect(() => {
-    if (mapInstanceRef.current) return
+  const filtered = locations.filter(loc =>
+    filter === 'all' || loc.type === filter
+  )
 
-    const img = new Image()
-    img.src = '/images/westeros-map.jpg'
-    img.onload = () => {
-      const W = img.naturalWidth
-      const H = img.naturalHeight
+  function handlePinClick(e, loc) {
+    e.stopPropagation()
+    const pin = e.currentTarget
+    const container = pin.closest('.static-map-container')
+    const pinRect = pin.getBoundingClientRect()
+    const containerRect = container.getBoundingClientRect()
 
-      const map = L.map(mapRef.current, {
-        crs: L.CRS.Simple,
-        minZoom: -2,
-        maxZoom: 2,
-        zoomSnap: 0.25,
-        attributionControl: false,
-      })
+    const x = ((pinRect.left + pinRect.width / 2) - containerRect.left) / containerRect.width * 100
+    const y = ((pinRect.top + pinRect.height / 2) - containerRect.top) / containerRect.height * 100
 
-      mapInstanceRef.current = map
-
-      const bounds = [[0, 0], [H, W]]
-      L.imageOverlay('/images/westeros-map.jpg', bounds).addTo(map)
-      map.fitBounds(bounds)
-      map.setMaxBounds(bounds)
-
-      locations.forEach(loc => {
-        const x = (loc.x / 100) * W
-        const y = H - (loc.y / 100) * H
-        const marker = L.marker([y, x], { icon: makeIcon(loc.type) })
-          .addTo(map)
-          .on('click', (e) => {
-            L.DomEvent.stopPropagation(e)
-            setSelected(loc)
-          })
-        marker.locationType = loc.type
-        markersRef.current.push(marker)
-      })
-    }
-
-    return () => {
-      if (mapInstanceRef.current) {
-        mapInstanceRef.current.remove()
-        mapInstanceRef.current = null
-      }
-    }
-  }, [])
-
-  function handleFilter(value) {
-    setFilter(value)
-    markersRef.current.forEach(marker => {
-      const map = mapInstanceRef.current
-      if (!map) return
-      if (value === 'all' || marker.locationType === value) {
-        if (!map.hasLayer(marker)) marker.addTo(map)
-      } else {
-        if (map.hasLayer(marker)) marker.remove()
-      }
-    })
+    setSelected({ ...loc, popupX: x, popupY: y })
   }
 
   return (
@@ -97,34 +33,64 @@ function MapPage() {
         <div className="map-controls">
           <button
             className={`map-filter-btn ${filter === 'all' ? 'active' : ''}`}
-            onClick={() => handleFilter('all')}
+            onClick={() => setFilter('all')}
           >All</button>
           <button
             className={`map-filter-btn ${filter === 'location' ? 'active' : ''}`}
-            onClick={() => handleFilter('location')}
+            onClick={() => setFilter('location')}
           >
             <span className="dot gold"></span> Locations
           </button>
           <button
             className={`map-filter-btn ${filter === 'dragon' ? 'active' : ''}`}
-            onClick={() => handleFilter('dragon')}
+            onClick={() => setFilter('dragon')}
           >
             <span className="dot red"></span> Dragon Sites
           </button>
         </div>
 
-        <div ref={mapRef} className="map-container" />
+        <div
+          className="static-map-container"
+          onClick={() => setSelected(null)}
+        >
+          <img
+            src="/images/westeros-map.jpg"
+            alt="Map of the Known World"
+            className="static-map-image"
+          />
 
-        {selected && (
-          <div className="map-popup">
-            <button className="map-popup-close" onClick={() => setSelected(null)}>✕</button>
-            <div className={`map-popup-type ${selected.type}`}>
-              {selected.type === 'dragon' ? 'Dragon Site' : 'Location'}
+          {filtered.map(loc => (
+            <div
+              key={loc.id}
+              className={`map-pin ${loc.type}`}
+              style={{ left: `${loc.x}%`, top: `${loc.y}%` }}
+              onClick={(e) => handlePinClick(e, loc)}
+            >
+              <div className="pin-dot" />
+              <div className="pin-tooltip">{loc.name}</div>
             </div>
-            <h3>{selected.name}</h3>
-            <p>{selected.description}</p>
-          </div>
-        )}
+          ))}
+
+          {selected && (
+            <div
+              className={`map-card ${selected.popupX > 70 ? 'anchor-right' : ''} ${selected.popupY > 70 ? 'anchor-bottom' : ''}`}
+              style={{
+                left: selected.popupX > 70 ? 'auto' : `${selected.popupX}%`,
+                right: selected.popupX > 70 ? `${100 - selected.popupX}%` : 'auto',
+                top: selected.popupY > 70 ? 'auto' : `${selected.popupY}%`,
+                bottom: selected.popupY > 70 ? `${100 - selected.popupY}%` : 'auto',
+              }}
+              onClick={e => e.stopPropagation()}
+            >
+              <div className={`map-card-tag ${selected.type}`}>
+                {selected.type === 'dragon' ? '🔥 Dragon Site' : '📍 Location'}
+              </div>
+              <h3 className="map-card-name">{selected.name}</h3>
+              <p className="map-card-desc">{selected.description}</p>
+              <button className="map-card-close" onClick={() => setSelected(null)}>✕</button>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   )
