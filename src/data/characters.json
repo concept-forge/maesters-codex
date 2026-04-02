@@ -1,0 +1,132 @@
+[
+  {
+    "id": 1,
+    "name": "Aegon I Targaryen",
+    "alias": "Aegon the Conqueror",
+    "house": "Targaryen",
+    "dragon_id": 1,
+    "status": "Dead",
+    "description": "The first King of the Seven Kingdoms. Conquered Westeros with his sisters and three dragons, forging the Iron Throne from the swords of his enemies.",
+    "image": "/images/characters/Aegon-1.png"
+  },
+  {
+    "id": 2,
+    "name": "Daenerys Targaryen",
+    "alias": "Mother of Dragons",
+    "house": "Targaryen",
+    "dragon_id": 4,
+    "status": "Unknown",
+    "description": "The last scion of House Targaryen. Hatched three dragons from stone eggs and crossed the narrow sea to reclaim her family's throne.",
+    "image": "/images/characters/Daenerys.png"
+  },
+  {
+    "id": 3,
+    "name": "Aemond Targaryen",
+    "alias": "Aemond One-Eye",
+    "house": "Targaryen",
+    "dragon_id": 2,
+    "status": "Dead",
+    "description": "Prince during the Dance of the Dragons. Lost his eye as a child claiming Vhagar, the largest dragon alive at the time.",
+    "image": "/images/characters/Aemond.png"
+  },
+  {
+    "id": 4,
+    "name": "Rhaenyra Targaryen",
+    "alias": "The Realm's Delight",
+    "house": "Targaryen",
+    "dragon_id": 6,
+    "status": "Dead",
+    "description": "Named heir to the Iron Throne by her father Viserys I. Her claim was contested by her half-brother Aegon II, igniting the Dance of the Dragons.",
+    "image": "/images/characters/Rhaenyra.png"
+  },
+  {
+    "id": 5,
+    "name": "Jon Snow",
+    "alias": "Aegon Targaryen",
+    "house": "Stark / Targaryen",
+    "dragon_id": 5,
+    "status": "Alive",
+    "description": "Raised as a bastard of Winterfell, later revealed as the son of Rhaegar Targaryen and Lyanna Stark — the true heir to the Iron Throne.",
+    "image": "/images/characters/John.png"
+  },
+  {
+    "id": 6,
+    "name": "Visenya Targaryen",
+    "alias": "The Warrior Queen",
+    "house": "Targaryen",
+    "dragon_id": 2,
+    "status": "Dead",
+    "description": "Elder sister-wife of Aegon the Conqueror. A fierce warrior who rode Vhagar during the conquest of Westeros.",
+    "image": "/images/characters/Visenya.png"
+  },
+  {
+    "id": 7,
+    "name": "Laena Velaryon",
+    "alias": "The Sea Snake's Daughter",
+    "house": "Velaryon",
+    "dragon_id": 2,
+    "status": "Dead",
+    "description": "Daughter of Corlys Velaryon. She claimed Vhagar and rode her until her tragic death at Driftmark.",
+    "image": "/images/characters/Laena.png"
+  },
+  {
+    "id": 8,
+    "name": "Rhaenys Targaryen",
+    "alias": "The Queen Who Never Was",
+    "house": "Targaryen",
+    "dragon_id": 8,
+    "status": "Dead",
+    "description": "Passed over for the throne despite being the eldest grandchild of Jaehaerys I. Rode Meleys until her death at Rook's Rest.",
+    "image": "/images/characters/Rhaenys.png"
+  },
+  {
+    "id": 9,
+    "name": "Daemon Targaryen",
+    "alias": "The Rogue Prince",
+    "house": "Targaryen",
+    "dragon_id": 7,
+    "status": "Dead",
+    "description": "Younger brother of King Viserys I. A brilliant but dangerous prince who rode Caraxes into battle across three continents.",
+    "image": "/images/characters/daemon.png"
+  },
+  {
+    "id": 10,
+    "name": "Rhaenys Targaryen",
+    "alias": "The Queen Who Never Was",
+    "house": "Targaryen",
+    "dragon_id": 8,
+    "status": "Dead",
+    "description": "Passed over for the throne despite being the eldest grandchild of Jaehaerys I. Rode Meleys until her death at Rook's Rest.",
+    "image": "/images/characters/Rhaenys.png"
+  },
+  {
+    "id": 11,
+    "name": "Jaehaerys I Targaryen",
+    "alias": "The Old King",
+    "house": "Targaryen",
+    "dragon_id": 9,
+    "status": "Dead",
+    "description": "The fourth Targaryen king, known as the Conciliator. His long reign was considered a golden age for the Seven Kingdoms.",
+    "image": "/images/characters/Jaehaerys.png"
+  },
+  {
+    "id": 12,
+    "name": "Alysanne Targaryen",
+    "alias": "Good Queen Alysanne",
+    "house": "Targaryen",
+    "dragon_id": 10,
+    "status": "Dead",
+    "description": "Wife of Jaehaerys I. Beloved queen who rode Silverwing and used her influence to improve the lives of women across the realm.",
+    "image": "/images/characters/Alysanne.png"
+  },
+  {
+    "id": 13,
+    "name": "Aegon II Targaryen",
+    "alias": "The Usurper",
+    "house": "Targaryen",
+    "dragon_id": 11,
+    "status": "Dead",
+    "description": "Son of Viserys I who claimed the throne over his half-sister Rhaenyra. Rode the beautiful golden dragon Sunfyre.",
+    "image": "/images/characters/Aegon-2.png"
+  }
+]

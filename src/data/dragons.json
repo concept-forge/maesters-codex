@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "name": "Balerion",
+    "also_known_as": "The Black Dread",
+    "rider_ids": [1],
+    "status": "Dead",
+    "description": "The largest dragon in recorded history. His fire could melt stone and steel. Aegon rode him during the conquest of Westeros.",
+    "color": "Black",
+    "flame_color": "Black and red",
+    "image": "/images/dragons/Balerion-16:9.png"
+  },
+  {
+    "id": 2,
+    "name": "Vhagar",
+    "also_known_as": "The Old Queen",
+    "rider_ids": [6, 7, 3],
+    "status": "Dead",
+    "description": "The oldest and second largest dragon during the Dance of Dragons. Ridden by three dragonriders across history.",
+    "color": "Pale green",
+    "flame_color": "Gold",
+    "image": "/images/dragons/Vhagar-16:9.png"
+  },
+  {
+    "id": 3,
+    "name": "Meraxes",
+    "also_known_as": "The Silver Queen",
+    "rider_ids": [8],
+    "status": "Dead",
+    "description": "One of the three dragons of the conquest. Meraxes was slain in Dorne with Rhaenys still on her back.",
+    "color": "Silver",
+    "flame_color": "Gold",
+    "image": "/images/dragons/Meraxes-16:9.png"
+  },
+  {
+    "id": 4,
+    "name": "Drogon",
+    "also_known_as": "The Winged Shadow",
+    "rider_ids": [2],
+    "status": "Alive",
+    "description": "The largest of Daenerys's three dragons, named after Khal Drogo. Black as coal with red markings.",
+    "color": "Black and red",
+    "flame_color": "Black and red",
+    "image": "/images/dragons/Drogon.png"
+  },
+  {
+    "id": 5,
+    "name": "Rhaegal",
+    "also_known_as": "The Green Dragon",
+    "rider_ids": [5],
+    "status": "Dead",
+    "description": "Named after Rhaegar Targaryen. Green and bronze scaled, killed by Euron Greyjoy's scorpions.",
+    "color": "Green and bronze",
+    "flame_color": "Orange",
+    "image": "/images/dragons/Rhaegal.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Syrax",
+    "also_known_as": "The Yellow Queen",
+    "rider_ids": [4],
+    "status": "Dead",
+    "description": "Rhaenyra Targaryen's dragon. A large yellow she-dragon who died during the storming of the Dragonpit.",
+    "color": "Yellow",
+    "flame_color": "Gold",
+    "image": "/images/dragons/Syrax-16:9.png"
+  },
+  {
+    "id": 7,
+    "name": "Caraxes",
+    "also_known_as": "The Blood Wyrm",
+    "rider_ids": [9],
+    "status": "Dead",
+    "description": "A fearsome red dragon ridden by Prince Daemon Targaryen. Known for his serpentine neck and ferocious temperament.",
+    "color": "Red",
+    "flame_color": "Orange and red",
+    "image": "/images/dragons/Caraxes-16:9.png"
+  },
+  {
+    "id": 8,
+    "name": "Meleys",
+    "also_known_as": "The Red Queen",
+    "rider_ids": [10],
+    "status": "Dead",
+    "description": "One of the fastest dragons in Westeros. Ridden by Princess Rhaenys Targaryen, known as the Queen Who Never Was.",
+    "color": "Scarlet and pink",
+    "flame_color": "Pink and gold",
+    "image": "/images/dragons/Meleyes-16:9.png"
+  },
+  {
+    "id": 9,
+    "name": "Vermithor",
+    "also_known_as": "The Bronze Fury",
+    "rider_ids": [11],
+    "status": "Dead",
+    "description": "The second largest dragon alive during the Dance of Dragons. Once ridden by King Jaehaerys I, later claimed by Hugh Hammer.",
+    "color": "Bronze and tan",
+    "flame_color": "Pale gold",
+    "image": "/images/dragons/Vermithor-16:9.png"
+  },
+  {
+    "id": 10,
+    "name": "Silverwing",
+    "also_known_as": "The Silver Queen",
+    "rider_ids": [12],
+    "status": "Dead",
+    "description": "A she-dragon with silver scales, once ridden by Good Queen Alysanne. She refused to cross the Wall twice.",
+    "color": "Silver",
+    "flame_color": "Pale gold",
+    "image": "/images/dragons/Silverwing-16:9.png"
+  },
+  {
+    "id": 11,
+    "name": "Sunfyre",
+    "also_known_as": "The Golden",
+    "rider_ids": [13],
+    "status": "Dead",
+    "description": "Considered the most beautiful dragon in the world. Golden scales with pale pink wings, ridden by King Aegon II Targaryen.",
+    "color": "Gold",
+    "flame_color": "Gold and pale flame",
+    "image": "/images/dragons/sunfire-16:9.png"
+  }
+]

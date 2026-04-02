@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "year": "2 BC",
+    "title": "Aegon's Landing",
+    "description": "Aegon Targaryen and his sisters land at the mouth of the Blackwater Rush with their three dragons.",
+    "type": "Conquest"
+  },
+  {
+    "id": 2,
+    "year": "1 AC",
+    "title": "The Field of Fire",
+    "description": "All three Targaryen dragons burn the combined armies of the Rock and the Reach. Four thousand men perish in the flames.",
+    "type": "Battle"
+  },
+  {
+    "id": 3,
+    "year": "1 AC",
+    "title": "Aegon's Coronation",
+    "description": "Aegon I Targaryen is crowned the first King of the Six Kingdoms at the Starry Sept of Oldtown.",
+    "type": "Political"
+  },
+  {
+    "id": 4,
+    "year": "10 AC",
+    "title": "Dorne refuses to kneel",
+    "description": "Rhaenys Targaryen and Meraxes are shot down over Dorne. Rhaenys is captured and dies in captivity.",
+    "type": "Battle"
+  },
+  {
+    "id": 5,
+    "year": "37 AC",
+    "title": "Death of Aegon I",
+    "description": "Aegon the Conqueror dies at Dragonstone. Aenys I inherits the throne.",
+    "type": "Death"
+  },
+  {
+    "id": 6,
+    "year": "129 AC",
+    "title": "Dance of the Dragons begins",
+    "description": "Civil war erupts between Rhaenyra Targaryen and her half-brother Aegon II over the Iron Throne.",
+    "type": "War"
+  },
+  {
+    "id": 7,
+    "year": "130 AC",
+    "title": "The Storming of the Dragonpit",
+    "description": "A mob storms the Dragonpit in King's Landing, killing several dragons including Syrax.",
+    "type": "Battle"
+  },
+  {
+    "id": 8,
+    "year": "131 AC",
+    "title": "Dance of the Dragons ends",
+    "description": "Both Aegon II and Rhaenyra die. The war ends with House Targaryen severely weakened and their dragons nearly extinct.",
+    "type": "War"
+  },
+  {
+    "id": 9,
+    "year": "298 AC",
+    "title": "Death of King Robert",
+    "description": "King Robert Baratheon dies from a hunting wound. Joffrey Baratheon ascends the Iron Throne.",
+    "type": "Death"
+  },
+  {
+    "id": 10,
+    "year": "299 AC",
+    "title": "Birth of the Dragons",
+    "description": "Daenerys Targaryen hatches three dragon eggs on Drogo's funeral pyre. Dragons return to the world for the first time in over a century.",
+    "type": "Dragon"
+  },
+  {
+    "id": 11,
+    "year": "305 AC",
+    "title": "The Long Night returns",
+    "description": "The Army of the Dead breaches the Wall. The Great War begins.",
+    "type": "War"
+  },
+  {
+    "id": 12,
+    "year": "305 AC",
+    "title": "Battle of Winterfell",
+    "description": "The living face the dead at Winterfell. Arya Stark kills the Night King, ending the Long Night.",
+    "type": "Battle"
+  }
+]
