@@ -4,6 +4,7 @@ import Characters from './pages/Characters'
 import Timeline from './pages/Timeline'
 import MapPage from './pages/Map'
 import Home from './pages/Home'
+import NavMenu from './components/NavMenu'
 
 function Footer() {
   return (
@@ -44,11 +45,14 @@ function App() {
         <NavLink to="/" end>
           <img src="/images/Logo.png" alt="Maesters Codex" className="nav-logo" />
         </NavLink>
-        <NavLink to="/" end>Home</NavLink>
-        <NavLink to="/dragons">Dragons</NavLink>
-        <NavLink to="/characters">Characters</NavLink>
-        <NavLink to="/timeline">Timeline</NavLink>
-        <NavLink to="/map">Map</NavLink>
+        <div className="nav-links">
+          <NavLink to="/" end>Home</NavLink>
+          <NavLink to="/dragons">Dragons</NavLink>
+          <NavLink to="/characters">Characters</NavLink>
+          <NavLink to="/timeline">Timeline</NavLink>
+          <NavLink to="/map">Map</NavLink>
+        </div>
+        <NavMenu />
       </nav>
 
       <main>

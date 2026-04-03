@@ -49,6 +49,12 @@ nav a::after {
   transition: width 0.3s ease;
 }
 
+.nav-links {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
 nav a:hover {
   color: #c9b28f;
 }
@@ -471,6 +477,34 @@ main {
   color: #c9a227;
 }
 
+.map-inner {
+  position: relative;
+  width: 100%;
+  line-height: 0;
+  will-change: transform;
+}
+
+.map-hint {
+  text-align: center;
+  color: #2a1a1a;
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  margin-top: 0.8rem;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .map-hint {
+    display: block;
+  }
+
+  .static-map-container {
+    overflow: hidden;
+    cursor: grab;
+  }
+}
+
 .dot {
   width: 8px;
   height: 8px;
@@ -486,7 +520,6 @@ main {
   width: 100%;
   border: 1px solid #2a1010;
   border-radius: 4px;
-  overflow: hidden;
   line-height: 0;
   cursor: default;
 }
@@ -1014,4 +1047,215 @@ main {
   font-size: 0.75rem;
   color: #6a5040;
   letter-spacing: 0.05em;
+}
+
+/* ── Responsive / Mobile ── */
+
+@media (max-width: 768px) {
+  .pin-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .pin-tooltip {
+    font-size: 0.5rem;
+    padding: 0.15rem 0.4rem;
+  }
+
+  .map-pin:hover .pin-dot {
+    transform: scale(1.4);
+  }
+}
+
+/* Hide hamburger on desktop, show nav links */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  margin-left: auto;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 1.5px;
+  background: #9a8a72;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 57px;
+  left: 0;
+  right: 0;
+  background: rgba(10, 5, 5, 0.98);
+  border-bottom: 1px solid #3a1010;
+  display: flex;
+  flex-direction: column;
+  z-index: 99;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.2s ease;
+}
+
+.mobile-menu a {
+  color: #9a8a72;
+  text-decoration: none;
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 1.2rem 2rem;
+  border-bottom: 1px solid #1a0808;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.mobile-menu a:hover,
+.mobile-menu a.active {
+  color: #e84545;
+  background: #0d0606;
+}
+
+@media (max-width: 768px) {
+  /* Nav */
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  nav {
+    padding: 1rem 1.5rem;
+  }
+
+  /* Page hero */
+  .page-hero {
+    padding: 2rem 1.5rem 1.5rem;
+  }
+
+  .page-hero h2 {
+    font-size: 2rem;
+  }
+
+  /* Card grid */
+  .card-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem 2rem;
+    gap: 1rem;
+  }
+
+  /* Search bar */
+  .search-bar {
+    padding: 0 1rem 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  /* Timeline */
+  .timeline-wrapper {
+    padding: 0 1rem 2rem;
+  }
+
+  .timeline {
+    padding-left: 80px;
+  }
+
+  .timeline-year {
+    left: -80px;
+    width: 65px;
+    font-size: 0.7rem;
+  }
+
+  /* Map */
+  .map-wrapper {
+    padding: 0 1rem 2rem;
+  }
+
+  .map-controls {
+    flex-wrap: wrap;
+  }
+
+  .map-card {
+    width: 180px;
+    padding: 1rem;
+  }
+
+  /* Modal */
+  .modal-overlay {
+    padding: 1rem;
+  }
+
+  .modal-body {
+    padding: 1.2rem;
+  }
+
+  .modal-body h3 {
+    font-size: 1.3rem;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 3rem 1.5rem;
+    flex-direction: column;
+    min-height: auto;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .hero-sigil {
+    font-size: 8rem;
+    opacity: 0.3;
+    position: absolute;
+  }
+
+  .hero-subtitle {
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 12vw, 5rem);
+  }
+
+  /* Home sections */
+  .home-sections {
+    grid-template-columns: 1fr;
+  }
+
+  .home-card {
+    padding: 2rem 1.5rem;
+  }
+
+  /* Footer */
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .footer-bottom {
+    padding: 1rem 1.5rem;
+  }
 }
