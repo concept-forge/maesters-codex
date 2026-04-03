@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import locations from '../data/locations.json'
 
 function MapPage() {
@@ -6,10 +6,17 @@ function MapPage() {
   const [filter, setFilter] = useState('all')
   const [scale, setScale] = useState(1)
   const [offset, setOffset] = useState({ x: 0, y: 0 })
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
   const lastTouchDist = useRef(null)
   const lastTouchPos = useRef(null)
-  const isDragging = useRef(false)
-  const mapRef = useRef(null)
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth <= 768)
+    }
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   const filtered = locations.filter(loc =>
     filter === 'all' || loc.type === filter
@@ -17,13 +24,17 @@ function MapPage() {
 
   function handlePinClick(e, loc) {
     e.stopPropagation()
-    const pin = e.currentTarget
-    const container = pin.closest('.static-map-container')
-    const pinRect = pin.getBoundingClientRect()
-    const containerRect = container.getBoundingClientRect()
-    const x = ((pinRect.left + pinRect.width / 2) - containerRect.left) / containerRect.width * 100
-    const y = ((pinRect.top + pinRect.height / 2) - containerRect.top) / containerRect.height * 100
-    setSelected({ ...loc, popupX: x, popupY: y })
+    if (!isMobile) {
+      const pin = e.currentTarget
+      const container = pin.closest('.static-map-container')
+      const pinRect = pin.getBoundingClientRect()
+      const containerRect = container.getBoundingClientRect()
+      const x = ((pinRect.left + pinRect.width / 2) - containerRect.left) / containerRect.width * 100
+      const y = ((pinRect.top + pinRect.height / 2) - containerRect.top) / containerRect.height * 100
+      setSelected({ ...loc, popupX: x, popupY: y })
+    } else {
+      setSelected(loc)
+    }
   }
 
   function getTouchDist(touches) {
@@ -37,7 +48,6 @@ function MapPage() {
       lastTouchDist.current = getTouchDist(e.touches)
     } else if (e.touches.length === 1) {
       lastTouchPos.current = { x: e.touches[0].clientX, y: e.touches[0].clientY }
-      isDragging.current = false
     }
   }
 
@@ -47,7 +57,7 @@ function MapPage() {
       const dist = getTouchDist(e.touches)
       if (lastTouchDist.current) {
         const delta = dist / lastTouchDist.current
-        setScale(prev => Math.min(Math.max(prev * delta, 1), 4))
+        setScale(prev => Math.min(Math.max(prev * delta, 1), 5))
       }
       lastTouchDist.current = dist
     } else if (e.touches.length === 1 && scale > 1) {
@@ -56,11 +66,7 @@ function MapPage() {
       if (lastTouchPos.current) {
         const dx = touch.clientX - lastTouchPos.current.x
         const dy = touch.clientY - lastTouchPos.current.y
-        isDragging.current = true
-        setOffset(prev => ({
-          x: prev.x + dx,
-          y: prev.y + dy
-        }))
+        setOffset(prev => ({ x: prev.x + dx, y: prev.y + dy }))
       }
       lastTouchPos.current = { x: touch.clientX, y: touch.clientY }
     }
@@ -85,26 +91,15 @@ function MapPage() {
 
       <div className="map-wrapper">
         <div className="map-controls">
-          <button
-            className={`map-filter-btn ${filter === 'all' ? 'active' : ''}`}
-            onClick={() => setFilter('all')}
-          >All</button>
-          <button
-            className={`map-filter-btn ${filter === 'location' ? 'active' : ''}`}
-            onClick={() => setFilter('location')}
-          >
+          <button className={`map-filter-btn ${filter === 'all' ? 'active' : ''}`} onClick={() => setFilter('all')}>All</button>
+          <button className={`map-filter-btn ${filter === 'location' ? 'active' : ''}`} onClick={() => setFilter('location')}>
             <span className="dot gold"></span> Locations
           </button>
-          <button
-            className={`map-filter-btn ${filter === 'dragon' ? 'active' : ''}`}
-            onClick={() => setFilter('dragon')}
-          >
+          <button className={`map-filter-btn ${filter === 'dragon' ? 'active' : ''}`} onClick={() => setFilter('dragon')}>
             <span className="dot red"></span> Dragon Sites
           </button>
           {scale > 1 && (
-            <button className="map-filter-btn" onClick={resetZoom}>
-              ↺ Reset zoom
-            </button>
+            <button className="map-filter-btn" onClick={resetZoom}>↺ Reset</button>
           )}
         </div>
 
@@ -117,12 +112,10 @@ function MapPage() {
           style={{ touchAction: scale > 1 ? 'none' : 'pan-y' }}
         >
           <div
-            ref={mapRef}
             className="map-inner"
             style={{
               transform: `translate(${offset.x}px, ${offset.y}px) scale(${scale})`,
               transformOrigin: '0 0',
-              transition: lastTouchDist.current ? 'none' : 'transform 0.1s ease',
             }}
           >
             <img
@@ -136,16 +129,21 @@ function MapPage() {
               <div
                 key={loc.id}
                 className={`map-pin ${loc.type}`}
-                style={{ left: `${loc.x}%`, top: `${loc.y}%` }}
+                style={{
+                  left: `${loc.x}%`,
+                  top: `${loc.y}%`,
+                  transform: `translate(-50%, -50%) scale(${1 / scale})`,
+                }}
                 onClick={(e) => handlePinClick(e, loc)}
               >
                 <div className="pin-dot" />
-                <div className="pin-tooltip">{loc.name}</div>
+                {!isMobile && <div className="pin-tooltip">{loc.name}</div>}
               </div>
             ))}
           </div>
 
-          {selected && (
+          {/* Desktop popup */}
+          {selected && !isMobile && (
             <div
               className={`map-card ${selected.popupX > 70 ? 'anchor-right' : ''} ${selected.popupY > 70 ? 'anchor-bottom' : ''}`}
               style={{
@@ -168,6 +166,23 @@ function MapPage() {
 
         <p className="map-hint">Pinch to zoom · Drag to pan · Tap a pin for details</p>
       </div>
+
+      {/* Mobile bottom sheet */}
+      {selected && isMobile && (
+        <div className="bottom-sheet-overlay" onClick={() => setSelected(null)}>
+          <div className="bottom-sheet" onClick={e => e.stopPropagation()}>
+            <div className="bottom-sheet-handle" />
+            <div className={`map-card-tag ${selected.type}`}>
+              {selected.type === 'dragon' ? '🔥 Dragon Site' : '📍 Location'}
+            </div>
+            <h3 className="bottom-sheet-title">{selected.name}</h3>
+            <p className="bottom-sheet-desc">{selected.description}</p>
+            <button className="bottom-sheet-close" onClick={() => setSelected(null)}>
+              Dismiss
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
