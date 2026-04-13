@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import locations from '../data/locations.json'
 
 function MapPage() {
@@ -18,23 +19,22 @@ function MapPage() {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
+  const routerLocation = useLocation()
+
+  useEffect(() => {
+    if (routerLocation.state?.highlightId) {
+      const loc = locations.find(l => l.id === routerLocation.state.highlightId)
+      if (loc) setSelected(loc)
+    }
+  }, [routerLocation.state])
+
   const filtered = locations.filter(loc =>
     filter === 'all' || loc.type === filter
   )
 
   function handlePinClick(e, loc) {
     e.stopPropagation()
-    if (!isMobile) {
-      const pin = e.currentTarget
-      const container = pin.closest('.static-map-container')
-      const pinRect = pin.getBoundingClientRect()
-      const containerRect = container.getBoundingClientRect()
-      const x = ((pinRect.left + pinRect.width / 2) - containerRect.left) / containerRect.width * 100
-      const y = ((pinRect.top + pinRect.height / 2) - containerRect.top) / containerRect.height * 100
-      setSelected({ ...loc, popupX: x, popupY: y })
-    } else {
-      setSelected(loc)
-    }
+    setSelected(loc)
   }
 
   function getTouchDist(touches) {
@@ -128,7 +128,7 @@ function MapPage() {
             {filtered.map(loc => (
               <div
                 key={loc.id}
-                className={`map-pin ${loc.type}`}
+                className={`map-pin ${loc.type} ${selected?.id === loc.id ? 'highlighted' : ''}`}
                 style={{
                   left: `${loc.x}%`,
                   top: `${loc.y}%`,
@@ -141,31 +141,34 @@ function MapPage() {
               </div>
             ))}
           </div>
-
-          {/* Desktop popup */}
-          {selected && !isMobile && (
-            <div
-              className={`map-card ${selected.popupX > 70 ? 'anchor-right' : ''} ${selected.popupY > 70 ? 'anchor-bottom' : ''}`}
-              style={{
-                left: selected.popupX > 70 ? 'auto' : `${selected.popupX}%`,
-                right: selected.popupX > 70 ? `${100 - selected.popupX}%` : 'auto',
-                top: selected.popupY > 70 ? 'auto' : `${selected.popupY}%`,
-                bottom: selected.popupY > 70 ? `${100 - selected.popupY}%` : 'auto',
-              }}
-              onClick={e => e.stopPropagation()}
-            >
-              <div className={`map-card-tag ${selected.type}`}>
-                {selected.type === 'dragon' ? '🔥 Dragon Site' : '📍 Location'}
-              </div>
-              <h3 className="map-card-name">{selected.name}</h3>
-              <p className="map-card-desc">{selected.description}</p>
-              <button className="map-card-close" onClick={() => setSelected(null)}>✕</button>
-            </div>
-          )}
         </div>
 
         <p className="map-hint">Pinch to zoom · Drag to pan · Tap a pin for details</p>
       </div>
+
+      {/* Desktop side panel */}
+      {selected && !isMobile && (
+        <div className="map-side-overlay" onClick={() => setSelected(null)}>
+          <div className="map-side-panel" onClick={e => e.stopPropagation()}>
+            <div className="map-side-header">
+              <div>
+                <div className={`map-card-tag ${selected.type}`}>
+                  {selected.type === 'dragon' ? '🔥 Dragon Site' : '📍 Location'}
+                </div>
+                <h3 className="map-side-title">{selected.name}</h3>
+              </div>
+              <button className="connections-close" onClick={() => setSelected(null)}>✕</button>
+            </div>
+            <div className="map-side-body">
+              <p className="map-side-desc">{selected.description}</p>
+              <div className="map-side-coords">
+                <span>Coordinates</span>
+                <span>{selected.x.toFixed(1)}% · {selected.y.toFixed(1)}%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Mobile bottom sheet */}
       {selected && isMobile && (

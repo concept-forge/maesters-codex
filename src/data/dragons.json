@@ -118,6 +118,160 @@
     "description": "Considered the most beautiful dragon in the world. Golden scales with pale pink wings, ridden by King Aegon II Targaryen.",
     "color": "Gold",
     "flame_color": "Gold and pale flame",
-    "image": "/images/dragons/sunfire-16:9.png"
+    "image": "/images/dragons/Sunfyre-16:9.png"
+  },
+  {
+    "id": 12,
+    "name": "Tyraxes",
+    "also_known_as": "The Young Dragon",
+    "rider_ids": [14],
+    "status": "Dead",
+    "description": "Ridden by Joffrey Velaryon, second son of Rhaenyra. Tyraxes was killed during the storming of the Dragonpit by a mob.",
+    "color": "Unknown",
+    "flame_color": "Unknown",
+    "image": "/images/dragons/Tyraxes-16:9.png"
+  },
+  {
+    "id": 13,
+    "name": "Arrax",
+    "also_known_as": "The Pearlescent",
+    "rider_ids": [15],
+    "status": "Dead",
+    "description": "A young dragon ridden by Lucerys Velaryon. Killed by Vhagar over Shipbreaker Bay in a confrontation that ignited the Dance of Dragons.",
+    "color": "White and silver",
+    "flame_color": "White and gold",
+    "image": "/images/dragons/Arrax-16:9.png"
+  },
+  {
+    "id": 14,
+    "name": "The Cannibal",
+    "also_known_as": "The Wild One",
+    "rider_ids": [],
+    "status": "Unknown",
+    "description": "A massive wild dragon who lurked in the caves of Dragonstone. Never tamed, he fed on the carcasses and eggs of other dragons. His fate is unknown.",
+    "color": "Black and green",
+    "flame_color": "Black",
+    "image": "/images/dragons/Cannibal-16:9.png"
+  },
+  {
+    "id": 15,
+    "name": "Sheepstealer",
+    "also_known_as": "The Mud Brown",
+    "rider_ids": [16],
+    "status": "Unknown",
+    "description": "A wild dragon eventually claimed by Nettles, a dragonseed girl who tamed him by feeding him fresh-slaughtered sheep each morning.",
+    "color": "Mud brown",
+    "flame_color": "Yellow",
+    "image": "/images/dragons/Sheepstealer-16:9.png"
+  },
+  {
+    "id": 16,
+    "name": "Grey Ghost",
+    "also_known_as": "The Pale Shadow",
+    "rider_ids": [],
+    "status": "Dead",
+    "description": "A wild, shy dragon who lived on Dragonstone and fed on fish from the sea. Never tamed. Killed by the Cannibal during the Dance of Dragons.",
+    "color": "Pale grey and white",
+    "flame_color": "Pale white",
+    "image": "/images/dragons/Greyghost-16:9.png"
+  },
+  {
+    "id": 17,
+    "name": "Tessarion",
+    "also_known_as": "The Blue Queen",
+    "rider_ids": [17],
+    "status": "Dead",
+    "description": "A beautiful cobalt blue she-dragon ridden by Prince Daeron Targaryen, youngest son of Viserys I. Killed at the Second Battle of Tumbleton.",
+    "color": "Cobalt blue",
+    "flame_color": "Cobalt and gold",
+    "image": "/images/dragons/Tessarion-16:9.png"
+  },
+  {
+    "id": 18,
+    "name": "Seasmoke",
+    "also_known_as": "The Silver Mist",
+    "rider_ids": [18],
+    "status": "Dead",
+    "description": "A pale grey and silver dragon ridden by Laenor Velaryon. After Laenor's death he was later claimed by Addam of Hull.",
+    "color": "Pale grey and silver",
+    "flame_color": "Pale grey",
+    "image": "/images/dragons/Seasmoke-16:9.png"
+  },
+  {
+    "id": 19,
+    "name": "Dreamfyre",
+    "also_known_as": "The She-Dragon",
+    "rider_ids": [19],
+    "status": "Dead",
+    "description": "A pale blue and silver she-dragon ridden by Helaena Targaryen. Killed during the storming of the Dragonpit, bringing down the dome as she died.",
+    "color": "Pale blue and silver",
+    "flame_color": "Pale blue",
+    "image": "/images/dragons/Dreamfyre-16:9.png"
+  },
+  {
+    "id": 20,
+    "name": "Moondancer",
+    "also_known_as": "The Green Wisp",
+    "rider_ids": [20],
+    "status": "Dead",
+    "description": "A small, young she-dragon ridden by Baela Targaryen. Mortally wounded in battle against Aegon II on Sunfyre.",
+    "color": "Green and gold",
+    "flame_color": "Gold",
+    "image": "/images/dragons/Moondancer-16:9.png"
+  },
+  {
+    "id": 21,
+    "name": "Vermax",
+    "also_known_as": "The Green Serpent",
+    "rider_ids": [21],
+    "status": "Dead",
+    "description": "Ridden by Jacaerys Velaryon, eldest son of Rhaenyra. Died at the Battle of the Gullet along with his rider.",
+    "color": "Green",
+    "flame_color": "Yellow-green",
+    "image": "/images/dragons/Vermax-16:9.png"
+  },
+  {
+    "id": 22,
+    "name": "Viserion",
+    "also_known_as": "The Ice Dragon",
+    "rider_ids": [2],
+    "status": "Dead",
+    "description": "One of Daenerys's three dragons, cream and gold in color. Killed by the Night King beyond the Wall and reanimated as an ice dragon.",
+    "color": "Cream and gold",
+    "flame_color": "Blue ice",
+    "image": "/images/dragons/Viserion-16:9.png"
+  },
+  {
+    "id": 23,
+    "name": "Morning",
+    "also_known_as": "The Pink Dragon",
+    "rider_ids": [22],
+    "status": "Alive",
+    "description": "A young pink and red she-dragon hatched during the Dance of Dragons, ridden by Rhaena Targaryen. One of the last dragons to survive the civil war.",
+    "color": "Pink and red",
+    "flame_color": "Rose gold",
+    "image": "/images/dragons/Morning-16:9.png"
+  },
+  {
+    "id": 24,
+    "name": "Quicksilver",
+    "also_known_as": "The Silver Flash",
+    "rider_ids": [23],
+    "status": "Dead",
+    "description": "Ridden by King Aenys I. A swift but relatively small dragon, killed in battle against Maegor the Cruel riding Balerion.",
+    "color": "Silver",
+    "flame_color": "Silver and white",
+    "image": "/images/dragons/Quicksilver-16:9.png"
+  },
+  {
+    "id": 25,
+    "name": "Stormcloud",
+    "also_known_as": "The Stormy",
+    "rider_ids": [24],
+    "status": "Dead",
+    "description": "A young dragon ridden by Aegon Targaryen, third son of Rhaenyra. Mortally wounded defending his rider from enemy arrows at the Battle of the Gullet.",
+    "color": "Grey and dark blue",
+    "flame_color": "Grey",
+    "image": "/images/dragons/Stormcloud-16:9.png"
   }
 ]

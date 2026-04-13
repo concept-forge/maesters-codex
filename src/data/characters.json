@@ -5,7 +5,7 @@
     "alias": "Aegon the Conqueror",
     "house": "Targaryen",
     "dragon_id": 1,
-    "status": "Dead",
+    "event_ids": [1, 2, 3, 5],
     "description": "The first King of the Seven Kingdoms. Conquered Westeros with his sisters and three dragons, forging the Iron Throne from the swords of his enemies.",
     "image": "/images/characters/Aegon-1.png"
   },
@@ -16,6 +16,7 @@
     "house": "Targaryen",
     "dragon_id": 4,
     "status": "Unknown",
+    "event_ids": [10, 11, 12],
     "description": "The last scion of House Targaryen. Hatched three dragons from stone eggs and crossed the narrow sea to reclaim her family's throne.",
     "image": "/images/characters/Daenerys.png"
   },
@@ -26,6 +27,7 @@
     "house": "Targaryen",
     "dragon_id": 2,
     "status": "Dead",
+    "event_ids": [6, 8],
     "description": "Prince during the Dance of the Dragons. Lost his eye as a child claiming Vhagar, the largest dragon alive at the time.",
     "image": "/images/characters/Aemond.png"
   },
@@ -36,6 +38,7 @@
     "house": "Targaryen",
     "dragon_id": 6,
     "status": "Dead",
+    "event_ids": [6, 7, 8],
     "description": "Named heir to the Iron Throne by her father Viserys I. Her claim was contested by her half-brother Aegon II, igniting the Dance of the Dragons.",
     "image": "/images/characters/Rhaenyra.png"
   },
@@ -46,6 +49,7 @@
     "house": "Stark / Targaryen",
     "dragon_id": 5,
     "status": "Alive",
+    "event_ids": [11, 12],
     "description": "Raised as a bastard of Winterfell, later revealed as the son of Rhaegar Targaryen and Lyanna Stark — the true heir to the Iron Throne.",
     "image": "/images/characters/John.png"
   },
@@ -56,6 +60,7 @@
     "house": "Targaryen",
     "dragon_id": 2,
     "status": "Dead",
+    "event_ids": [1, 2, 3],
     "description": "Elder sister-wife of Aegon the Conqueror. A fierce warrior who rode Vhagar during the conquest of Westeros.",
     "image": "/images/characters/Visenya.png"
   },
@@ -66,6 +71,7 @@
     "house": "Velaryon",
     "dragon_id": 2,
     "status": "Dead",
+    "event_ids": [6],
     "description": "Daughter of Corlys Velaryon. She claimed Vhagar and rode her until her tragic death at Driftmark.",
     "image": "/images/characters/Laena.png"
   },
@@ -76,6 +82,7 @@
     "house": "Targaryen",
     "dragon_id": 8,
     "status": "Dead",
+    "event_ids": [1, 2, 4],
     "description": "Passed over for the throne despite being the eldest grandchild of Jaehaerys I. Rode Meleys until her death at Rook's Rest.",
     "image": "/images/characters/Rhaenys.png"
   },
@@ -86,6 +93,7 @@
     "house": "Targaryen",
     "dragon_id": 7,
     "status": "Dead",
+    "event_ids": [6, 8],
     "description": "Younger brother of King Viserys I. A brilliant but dangerous prince who rode Caraxes into battle across three continents.",
     "image": "/images/characters/daemon.png"
   },
@@ -96,6 +104,7 @@
     "house": "Targaryen",
     "dragon_id": 8,
     "status": "Dead",
+    "event_ids": [6],
     "description": "Passed over for the throne despite being the eldest grandchild of Jaehaerys I. Rode Meleys until her death at Rook's Rest.",
     "image": "/images/characters/Rhaenys.png"
   },
@@ -106,6 +115,7 @@
     "house": "Targaryen",
     "dragon_id": 9,
     "status": "Dead",
+    "event_ids": [],
     "description": "The fourth Targaryen king, known as the Conciliator. His long reign was considered a golden age for the Seven Kingdoms.",
     "image": "/images/characters/Jaehaerys.png"
   },
@@ -116,6 +126,7 @@
     "house": "Targaryen",
     "dragon_id": 10,
     "status": "Dead",
+    "event_ids": [],
     "description": "Wife of Jaehaerys I. Beloved queen who rode Silverwing and used her influence to improve the lives of women across the realm.",
     "image": "/images/characters/Alysanne.png"
   },
@@ -126,7 +137,129 @@
     "house": "Targaryen",
     "dragon_id": 11,
     "status": "Dead",
+    "event_ids": [6, 7, 8],
     "description": "Son of Viserys I who claimed the throne over his half-sister Rhaenyra. Rode the beautiful golden dragon Sunfyre.",
     "image": "/images/characters/Aegon-2.png"
+  },
+  {
+    "id": 14,
+    "name": "Joffrey Velaryon",
+    "alias": "Prince of Driftmark",
+    "house": "Velaryon",
+    "dragon_id": 12,
+    "status": "Dead",
+    "event_ids": [7],
+    "description": "Third son of Rhaenyra Targaryen and Laenor Velaryon. Rider of Tyraxes, killed during the storming of the Dragonpit.",
+    "image": "/images/characters/Joffery.png"
+  },
+  {
+    "id": 15,
+    "name": "Lucerys Velaryon",
+    "alias": "Luke",
+    "house": "Velaryon",
+    "dragon_id": 13,
+    "status": "Dead",
+    "event_ids": [6],
+    "description": "Second son of Rhaenyra Targaryen. Rider of Arrax, killed by Aemond and Vhagar over Shipbreaker Bay — the act that started the Dance of Dragons.",
+    "image": "/images/characters/Lucerys.png"
+  },
+  {
+    "id": 16,
+    "name": "Nettles",
+    "alias": "The Dragonseed",
+    "house": "Unknown",
+    "dragon_id": 15,
+    "status": "Unknown",
+    "event_ids": [],
+    "description": "A common-born girl of uncertain origin who tamed the wild dragon Sheepstealer by feeding him fresh sheep each morning. Her ultimate fate is unknown.",
+    "image": "/images/characters/Nettles.png"
+  },
+  {
+    "id": 17,
+    "name": "Daeron Targaryen",
+    "alias": "Daeron the Daring",
+    "house": "Targaryen",
+    "dragon_id": 17,
+    "status": "Dead",
+    "event_ids": [6, 8],
+    "description": "Youngest son of Viserys I and Alicent Hightower. Rider of the blue dragon Tessarion, fought for the Greens during the Dance of Dragons.",
+    "image": "/images/characters/Aegon-The-Younger.png"
+  },
+  {
+    "id": 18,
+    "name": "Laenor Velaryon",
+    "alias": "The Sea Snake's Son",
+    "house": "Velaryon",
+    "dragon_id": 18,
+    "status": "Unknown",
+    "event_ids": [6],
+    "description": "Son of Corlys Velaryon and Rhaenys Targaryen. Husband of Rhaenyra. Rider of Seasmoke, officially died at Driftmark though his fate is debated.",
+    "image": "/images/characters/Laenor.png"
+  },
+  {
+    "id": 19,
+    "name": "Helaena Targaryen",
+    "alias": "The Dreamer",
+    "house": "Targaryen",
+    "dragon_id": 19,
+    "status": "Dead",
+    "event_ids": [7],
+    "description": "Daughter of Viserys I and Alicent Hightower. Wife of Aegon II. A dragonrider and dreamer who spoke in riddles that proved prophetic.",
+    "image": "/images/characters/Helaena.png"
+  },
+  {
+    "id": 20,
+    "name": "Baela Targaryen",
+    "alias": "The Dragonrider",
+    "house": "Targaryen",
+    "dragon_id": 20,
+    "status": "Dead",
+    "event_ids": [8],
+    "description": "Daughter of Daemon Targaryen and Laena Velaryon. Rider of Moondancer. Fought bravely against Aegon II in the final days of the Dance.",
+    "image": "/images/characters/Baela.png"
+  },
+  {
+    "id": 21,
+    "name": "Jacaerys Velaryon",
+    "alias": "Jace",
+    "house": "Velaryon",
+    "dragon_id": 21,
+    "status": "Dead",
+    "event_ids": [6],
+    "description": "Eldest son of Rhaenyra Targaryen and Laenor Velaryon. Rider of Vermax. Died at the Battle of the Gullet defending his mother's claim.",
+    "image": "/images/characters/Jacaerys.png"
+  },
+  {
+    "id": 22,
+    "name": "Rhaena Targaryen",
+    "alias": "The Younger",
+    "house": "Targaryen",
+    "dragon_id": 23,
+    "status": "Dead",
+    "event_ids": [8],
+    "description": "Daughter of Daemon Targaryen and Laena Velaryon, twin sister of Baela. Rider of Morning, one of the last dragons to survive the Dance.",
+    "image": "/images/characters/Rhaena.png"
+  },
+  {
+    "id": 23,
+    "name": "Aenys I Targaryen",
+    "alias": "The Weak King",
+    "house": "Targaryen",
+    "dragon_id": 24,
+    "status": "Dead",
+    "event_ids": [5],
+    "description": "Second king of the Seven Kingdoms, son of Aegon the Conqueror. A gentle and artistic man ill-suited to rule, rider of Quicksilver.",
+    "image": "/images/characters/Aenys-I.png"
+  },
+  {
+    "id": 24,
+    "name": "Aegon Targaryen",
+    "alias": "The Younger",
+    "house": "Targaryen",
+    "dragon_id": 25,
+    "status": "Dead",
+    "event_ids": [6],
+    "description": "Third son of Rhaenyra Targaryen. His young dragon Stormcloud died saving him from arrows at the Battle of the Gullet.",
+    "image": "/images/characters/Aegon-The-Younger.png"
   }
 ]

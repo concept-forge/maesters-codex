@@ -45,17 +45,7 @@ function Dragons() {
           onChange={e => setSearch(e.target.value)}
           className="search-input"
         />
-        <div className="filter-btns">
-          {['all', 'alive', 'dead'].map(s => (
-            <button
-              key={s}
-              className={`filter-btn ${statusFilter === s ? 'active' : ''}`}
-              onClick={() => setStatusFilter(s)}
-            >
-              {s.charAt(0).toUpperCase() + s.slice(1)}
-            </button>
-          ))}
-        </div>
+      
       </div>
 
       {filtered.length === 0 && (
@@ -82,10 +72,7 @@ function Dragons() {
                   ))}
                 </ul>
               </div>
-              <p>
-                <span>Status: </span>
-                <span className={getStatusClass(dragon.status)}>{dragon.status}</span>
-              </p>
+            
             </div>
           </div>
         ))}
@@ -111,10 +98,7 @@ function Dragons() {
                 ))}
               </ul>
             </div>
-            <p>
-              <span>Status: </span>
-              <span className={getStatusClass(selected.status)}>{selected.status}</span>
-            </p>
+          
             <p className="description">{selected.description}</p>
           </div>
         </CardModal>

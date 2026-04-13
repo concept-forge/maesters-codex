@@ -9,6 +9,15 @@ const typeColors = {
   Dragon: '#2e8b57'
 }
 
+function parseYear(y) {
+  if (!y) return 0
+  const bc = y.includes('BC')
+  const num = parseInt(y.replace(/[^0-9]/g, '')) || 0
+  return bc ? -num : num
+}
+
+const sortedEvents = [...events].sort((a, b) => parseYear(a.year) - parseYear(b.year))
+
 function Timeline() {
   return (
     <div>
@@ -18,7 +27,7 @@ function Timeline() {
       </div>
       <div className="timeline-wrapper">
         <div className="timeline">
-          {events.map(event => (
+          {sortedEvents.map(event => (
             <div key={event.id} className="timeline-item">
               <div className="timeline-year">{event.year}</div>
               <div className="timeline-dot" style={{ backgroundColor: typeColors[event.type] || '#c9b28f' }}></div>

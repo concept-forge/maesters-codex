@@ -21,8 +21,10 @@ function NavMenu() {
           <NavLink to="/" end onClick={() => setOpen(false)}>Home</NavLink>
           <NavLink to="/dragons" onClick={() => setOpen(false)}>Dragons</NavLink>
           <NavLink to="/characters" onClick={() => setOpen(false)}>Characters</NavLink>
+          <NavLink to="/houses" onClick={() => setOpen(false)}>Houses</NavLink>
           <NavLink to="/timeline" onClick={() => setOpen(false)}>Timeline</NavLink>
           <NavLink to="/map" onClick={() => setOpen(false)}>Map</NavLink>
+          <NavLink to="/battles" onClick={() => setOpen(false)}>Battles</NavLink>
         </div>
       )}
     </>

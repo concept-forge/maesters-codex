@@ -1,0 +1,292 @@
+[
+  {
+    "id": 1,
+    "name": "The Field of Fire",
+    "conflict": "Aegon's Conquest",
+    "year": "1 AC",
+    "location": "The Reach",
+    "outcome": "Targaryen Victory",
+    "outcome_type": "victory",
+    "summary": "The only battle in which all three Targaryen dragons fought together. Aegon, Visenya and Rhaenys unleashed Balerion, Vhagar and Meraxes upon the combined armies of House Lannister and House Gardener. Over four thousand men burned alive. King Mern Gardener of the Reach died in the flames, ending House Gardener forever. Lord Loren Lannister survived and bent the knee.",
+    "commanders": [
+      { "name": "Aegon I Targaryen", "side": "Targaryen", "character_id": 1 },
+      { "name": "Visenya Targaryen", "side": "Targaryen", "character_id": 6 },
+      { "name": "Rhaenys Targaryen", "side": "Targaryen", "character_id": 8 },
+      { "name": "King Mern IX Gardener", "side": "Alliance", "character_id": null },
+      { "name": "King Loren I Lannister", "side": "Alliance", "character_id": null }
+    ],
+    "dragons": [1, 2, 3],
+    "casualties": "4,000+ dead on the Alliance side. House Gardener extinct.",
+    "significance": "The most devastating use of dragonfire in the conquest. Broke the resistance of the Reach and the Westerlands in a single afternoon.",
+    "map_location_ids": [46]
+  },
+  {
+    "id": 2,
+    "name": "The Last Storm",
+    "conflict": "Aegon's Conquest",
+    "year": "1 AC",
+    "location": "The Stormlands",
+    "outcome": "Targaryen Victory",
+    "outcome_type": "victory",
+    "summary": "Orys Baratheon and Rhaenys Targaryen on Meraxes faced the host of Argilac the Arrogant, last Storm King. Argilac rode out to meet them in open battle. He was slain by Orys Baratheon in single combat. Orys took Argilac's daughter, castle, sigil and words as his own — founding House Baratheon.",
+    "commanders": [
+      { "name": "Orys Baratheon", "side": "Targaryen", "character_id": null },
+      { "name": "Rhaenys Targaryen", "side": "Targaryen", "character_id": 8 },
+      { "name": "Argilac the Arrogant", "side": "Stormlands", "character_id": null }
+    ],
+    "dragons": [3],
+    "casualties": "Argilac slain. Storm's End taken.",
+    "significance": "Founded House Baratheon. Ended the Storm King dynasty that had ruled for thousands of years.",
+    "map_location_ids": [68]
+  },
+  {
+    "id": 3,
+    "name": "The Burning of Harrenhal",
+    "conflict": "Aegon's Conquest",
+    "year": "1 AC",
+    "location": "The Riverlands",
+    "outcome": "Targaryen Victory",
+    "outcome_type": "victory",
+    "summary": "Harren the Black had spent forty years building the greatest castle in Westeros. On the very night it was finished, Aegon flew Balerion over its walls. Harren refused to surrender. Balerion's black fire melted the towers and cooked Harren and his sons alive inside their own walls.",
+    "commanders": [
+      { "name": "Aegon I Targaryen", "side": "Targaryen", "character_id": 1 },
+      { "name": "Harren the Black", "side": "Iron Islands", "character_id": null }
+    ],
+    "dragons": [1],
+    "casualties": "Harren the Black and all his sons killed. House Hoare extinct.",
+    "significance": "Ended the ironborn rule of the Riverlands. Harrenhal cursed ever since — every house that holds it meets ruin.",
+    "map_location_ids": [39]
+  },
+  {
+    "id": 4,
+    "name": "The Fall of Meraxes",
+    "conflict": "Aegon's Conquest",
+    "year": "10 AC",
+    "location": "Dorne",
+    "outcome": "Dornish Victory",
+    "outcome_type": "defeat",
+    "summary": "Rhaenys Targaryen flew Meraxes deep into Dorne to break their resistance. Over the Hellholt, a Dornish scorpion bolt struck Meraxes through the eye. The dragon fell from the sky with Rhaenys still riding her. Rhaenys was captured and died in Dornish captivity.",
+    "commanders": [
+      { "name": "Rhaenys Targaryen", "side": "Targaryen", "character_id": 8 },
+      { "name": "House Uller of the Hellholt", "side": "Dorne", "character_id": null }
+    ],
+    "dragons": [3],
+    "casualties": "Meraxes killed. Rhaenys Targaryen captured and killed.",
+    "significance": "The only major Targaryen defeat of the conquest. Dorne remained unconquered for another century.",
+    "map_location_ids": [99, 9]
+  },
+  {
+    "id": 5,
+    "name": "The Submission of the Vale",
+    "conflict": "Aegon's Conquest",
+    "year": "1 AC",
+    "location": "The Vale",
+    "outcome": "Targaryen Victory",
+    "outcome_type": "victory",
+    "summary": "Queen Visenya flew Vhagar to the Eyrie alone, landing in the courtyard without warning. The young boy king Ronnel Arryn was so entranced by the dragon that he begged his mother to let him ride. Queen Regent Sharra surrendered the Vale without a drop of blood being shed in exchange for Ronnel being allowed a ride on Vhagar.",
+    "commanders": [
+      { "name": "Visenya Targaryen", "side": "Targaryen", "character_id": 6 },
+      { "name": "Queen Regent Sharra Arryn", "side": "Vale", "character_id": null }
+    ],
+    "dragons": [2],
+    "casualties": "None — bloodless surrender.",
+    "significance": "One of the most remarkable moments of the conquest. The Vale surrendered without a single battle.",
+    "map_location_ids": [24]
+  },
+  {
+    "id": 6,
+    "name": "Battle at Shipbreaker Bay",
+    "conflict": "Dance of the Dragons",
+    "year": "129 AC",
+    "location": "Shipbreaker Bay, Stormlands",
+    "outcome": "Green Victory",
+    "outcome_type": "defeat",
+    "summary": "Prince Aemond Targaryen riding Vhagar intercepted Lucerys Velaryon on young Arrax over Shipbreaker Bay during a raging storm. Though Aemond claimed he only meant to intimidate, Vhagar acted on instinct and killed both Arrax and Lucerys. The death of Lucerys made full-scale war inevitable.",
+    "commanders": [
+      { "name": "Aemond Targaryen", "side": "Greens", "character_id": 3 },
+      { "name": "Lucerys Velaryon", "side": "Blacks", "character_id": 15 }
+    ],
+    "dragons": [2, 13],
+    "casualties": "Lucerys Velaryon killed. Arrax killed.",
+    "significance": "The murder that ignited the Dance of the Dragons civil war.",
+    "map_location_ids": [68]
+  },
+  {
+    "id": 7,
+    "name": "Battle of Rook's Rest",
+    "conflict": "Dance of the Dragons",
+    "year": "129 AC",
+    "location": "Rook's Rest, Crownlands",
+    "outcome": "Green Victory",
+    "outcome_type": "defeat",
+    "summary": "Aemond and Criston Cole lured Rhaenys Targaryen into a trap at Rook's Rest. When Rhaenys flew Meleys to relieve the castle, Aegon II arrived on Sunfyre and Aemond on Vhagar. Outnumbered, Meleys fought savagely — badly scarring Sunfyre — but was overwhelmed and killed. Rhaenys died with her dragon.",
+    "commanders": [
+      { "name": "Rhaenys Targaryen", "side": "Blacks", "character_id": 10 },
+      { "name": "Aegon II Targaryen", "side": "Greens", "character_id": 13 },
+      { "name": "Aemond Targaryen", "side": "Greens", "character_id": 3 },
+      { "name": "Ser Criston Cole", "side": "Greens", "character_id": null }
+    ],
+    "dragons": [8, 11, 2],
+    "casualties": "Rhaenys Targaryen killed. Meleys killed. Sunfyre badly wounded. Aegon II severely injured.",
+    "significance": "Death of the Queen Who Never Was. One of the most dramatic dragon battles of the civil war.",
+    "map_location_ids": [50]
+  },
+  {
+    "id": 8,
+    "name": "Battle of the Gullet",
+    "conflict": "Dance of the Dragons",
+    "year": "129 AC",
+    "location": "The Gullet, Narrow Sea",
+    "outcome": "Pyrrhic Black Victory",
+    "outcome_type": "victory",
+    "summary": "Three dragon-riding sons of Rhaenyra attacked the Triarchy fleet in the Gullet. Jacaerys on Vermax, Joffrey on Tyraxes and young Aegon on Stormcloud fought the fleet. Stormcloud was mortally wounded saving his rider. Jacaerys and Vermax were killed. The Triarchy fleet was destroyed but at terrible cost.",
+    "commanders": [
+      { "name": "Jacaerys Velaryon", "side": "Blacks", "character_id": 21 },
+      { "name": "Joffrey Velaryon", "side": "Blacks", "character_id": 14 },
+      { "name": "Aegon Targaryen the Younger", "side": "Blacks", "character_id": 24 }
+    ],
+    "dragons": [21, 12, 25],
+    "casualties": "Jacaerys Velaryon killed. Vermax killed. Stormcloud mortally wounded.",
+    "significance": "Destroyed the Triarchy fleet but cost Rhaenyra two of her sons and two dragons.",
+    "map_location_ids": [42]
+  },
+  {
+    "id": 9,
+    "name": "The Storming of the Dragonpit",
+    "conflict": "Dance of the Dragons",
+    "year": "130 AC",
+    "location": "King's Landing",
+    "outcome": "Mob Victory",
+    "outcome_type": "defeat",
+    "summary": "A massive mob led by a Shepherd stormed the Dragonpit in King's Landing, slaying several dragons including Shrykos, Morghul, Tyraxes and Dreamfyre. Prince Joffrey Velaryon fell to his death trying to ride Syrax to the Dragonpit. Helaena Targaryen threw herself from her window upon hearing the news.",
+    "commanders": [
+      { "name": "The Shepherd", "side": "Mob", "character_id": null },
+      { "name": "Joffrey Velaryon", "side": "Blacks", "character_id": 14 }
+    ],
+    "dragons": [12, 19],
+    "casualties": "Multiple dragons killed. Joffrey Velaryon killed. Helaena Targaryen died shortly after.",
+    "significance": "The single greatest loss of dragons in a single event. Marked the twilight of the dragon age in Westeros.",
+    "map_location_ids": [50]
+  },
+  {
+    "id": 10,
+    "name": "Battle of the Bells",
+    "conflict": "Robert's Rebellion",
+    "year": "283 AC",
+    "location": "Stoney Sept, Riverlands",
+    "outcome": "Rebel Victory",
+    "outcome_type": "victory",
+    "summary": "Robert Baratheon was hiding wounded in Stoney Sept when Lord Jon Connington searched the town for him. The bells of the sept rang to warn the townspeople. Eddard Stark, Hoster Tully and Jon Arryn arrived with their armies to relieve the town. The loyalist force was routed and fled back to King's Landing.",
+    "commanders": [
+      { "name": "Robert Baratheon", "side": "Rebels", "character_id": null },
+      { "name": "Eddard Stark", "side": "Rebels", "character_id": null },
+      { "name": "Jon Arryn", "side": "Rebels", "character_id": null },
+      { "name": "Hoster Tully", "side": "Rebels", "character_id": null },
+      { "name": "Jon Connington", "side": "Loyalists", "character_id": null }
+    ],
+    "dragons": [],
+    "casualties": "Ser Denys Arryn killed. Jon Connington exiled for his failure.",
+    "significance": "Saved Robert's life and turned the tide of the rebellion decisively in favour of the rebels.",
+    "map_location_ids": [44]
+  },
+  {
+    "id": 11,
+    "name": "Battle of the Trident",
+    "conflict": "Robert's Rebellion",
+    "year": "283 AC",
+    "location": "The Trident, Riverlands",
+    "outcome": "Rebel Victory",
+    "outcome_type": "victory",
+    "summary": "The decisive battle of Robert's Rebellion. Robert Baratheon faced Prince Rhaegar Targaryen in single combat in the waters of the Trident. Robert drove his warhammer into Rhaegar's chest, scattering the rubies from his armour across the river. Rhaegar's death broke the Targaryen army and ended the rebellion.",
+    "commanders": [
+      { "name": "Robert Baratheon", "side": "Rebels", "character_id": null },
+      { "name": "Eddard Stark", "side": "Rebels", "character_id": null },
+      { "name": "Rhaegar Targaryen", "side": "Loyalists", "character_id": null },
+      { "name": "Prince Lewyn Martell", "side": "Loyalists", "character_id": null }
+    ],
+    "dragons": [],
+    "casualties": "Rhaegar Targaryen killed. Loyalist army routed. Prince Lewyn Martell mortally wounded.",
+    "significance": "The most decisive battle in recent Westerosi history. Ended three hundred years of Targaryen rule.",
+    "map_location_ids": [30]
+  },
+  {
+    "id": 12,
+    "name": "The Red Wedding",
+    "conflict": "War of the Five Kings",
+    "year": "299 AC",
+    "location": "The Twins, Riverlands",
+    "outcome": "Lannister-Frey-Bolton Victory",
+    "outcome_type": "defeat",
+    "summary": "Robb Stark attended the wedding of his uncle Edmure Tully at the Twins as guest of Walder Frey. During the feast, Frey men and Bolton soldiers slaughtered Robb, his mother Catelyn and most of his army. Guest right was violated. Robb was killed by Roose Bolton. Catelyn's throat was cut. The King in the North was dead.",
+    "commanders": [
+      { "name": "Robb Stark", "side": "Starks", "character_id": null },
+      { "name": "Catelyn Stark", "side": "Starks", "character_id": null },
+      { "name": "Walder Frey", "side": "Freys", "character_id": null },
+      { "name": "Roose Bolton", "side": "Boltons", "character_id": null }
+    ],
+    "dragons": [],
+    "casualties": "Robb Stark killed. Catelyn Stark killed. Grey Wind killed. Northern army destroyed.",
+    "significance": "Effectively ended the War of the Five Kings in the south. The most shocking act of treachery in recent history.",
+    "map_location_ids": [19]
+  },
+  {
+    "id": 13,
+    "name": "Battle of the Blackwater",
+    "conflict": "War of the Five Kings",
+    "year": "299 AC",
+    "location": "Blackwater Bay, King's Landing",
+    "outcome": "Lannister Victory",
+    "outcome_type": "victory",
+    "summary": "Stannis Baratheon's fleet attacked King's Landing by sea. Tyrion Lannister deployed a massive wildfire chain that destroyed much of Stannis's fleet in a devastating green explosion. Though Stannis's forces breached the Mud Gate, Tywin Lannister arrived with the Tyrell army to rout the attackers. King's Landing was saved.",
+    "commanders": [
+      { "name": "Tyrion Lannister", "side": "Lannisters", "character_id": null },
+      { "name": "Tywin Lannister", "side": "Lannisters", "character_id": null },
+      { "name": "Mace Tyrell", "side": "Tyrells", "character_id": null },
+      { "name": "Stannis Baratheon", "side": "Baratheons", "character_id": null }
+    ],
+    "dragons": [],
+    "casualties": "Thousands dead on both sides. Much of Stannis's fleet destroyed by wildfire.",
+    "significance": "Saved the Lannister regime. Effectively ended Stannis's campaign to take King's Landing.",
+    "map_location_ids": [50, 42]
+  },
+  {
+    "id": 14,
+    "name": "Battle of the Bastards",
+    "conflict": "War of the Five Kings",
+    "year": "303 AC",
+    "location": "Winterfell, The North",
+    "outcome": "Stark Victory",
+    "outcome_type": "victory",
+    "summary": "Jon Snow faced Ramsay Bolton outside Winterfell to reclaim his family's seat. Ramsay used Rickon Stark as bait and surrounded Jon's forces in a deadly encirclement. At the last moment the Knights of the Vale arrived, routing Bolton's forces. Ramsay was captured and fed to his own hounds by Sansa.",
+    "commanders": [
+      { "name": "Jon Snow", "side": "Starks", "character_id": 5 },
+      { "name": "Sansa Stark", "side": "Starks", "character_id": null },
+      { "name": "Petyr Baelish", "side": "Vale", "character_id": null },
+      { "name": "Ramsay Bolton", "side": "Boltons", "character_id": null }
+    ],
+    "dragons": [],
+    "casualties": "Rickon Stark killed. Ramsay Bolton executed. Heavy losses on both sides.",
+    "significance": "Reclaimed Winterfell for House Stark. Ended Bolton rule of the North.",
+    "map_location_ids": [9]
+  },
+  {
+    "id": 15,
+    "name": "Battle of Winterfell — The Long Night",
+    "conflict": "The Great War",
+    "year": "305 AC",
+    "location": "Winterfell, The North",
+    "outcome": "Victory for the Living",
+    "outcome_type": "victory",
+    "summary": "The Army of the Dead descended on Winterfell in the darkest night in living memory. Daenerys rode Drogon and Jon rode Rhaegal against the undead Viserion. The battle was nearly lost until Arya Stark emerged from the darkness and drove a Valyrian steel dagger through the Night King, shattering his entire army instantly.",
+    "commanders": [
+      { "name": "Jon Snow", "side": "Living", "character_id": 5 },
+      { "name": "Daenerys Targaryen", "side": "Living", "character_id": 2 },
+      { "name": "Arya Stark", "side": "Living", "character_id": null },
+      { "name": "The Night King", "side": "Dead", "character_id": null }
+    ],
+    "dragons": [4, 5, 22],
+    "casualties": "Theon Greyjoy killed. Jorah Mormont killed. Lyanna Mormont killed. Edd Tollett killed. Melisandre died. Countless wights and dead destroyed.",
+    "significance": "The end of the Long Night. The greatest threat to all living men was destroyed by a single Valyrian steel blade.",
+    "map_location_ids": [9, 6]
+  }
+]

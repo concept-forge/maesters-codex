@@ -3,84 +3,140 @@
     "id": 1,
     "year": "2 BC",
     "title": "Aegon's Landing",
-    "description": "Aegon Targaryen and his sisters land at the mouth of the Blackwater Rush with their three dragons.",
+    "description": "Aegon Targaryen and his sisters Visenya and Rhaenys land at the mouth of the Blackwater Rush with their three dragons — Balerion, Vhagar and Meraxes.",
     "type": "Conquest"
   },
   {
     "id": 2,
     "year": "1 AC",
     "title": "The Field of Fire",
-    "description": "All three Targaryen dragons burn the combined armies of the Rock and the Reach. Four thousand men perish in the flames.",
+    "description": "All three Targaryen dragons burn the combined armies of House Lannister and House Gardener. Over four thousand men perish. House Gardener is extinguished forever.",
     "type": "Battle"
   },
   {
     "id": 3,
     "year": "1 AC",
     "title": "Aegon's Coronation",
-    "description": "Aegon I Targaryen is crowned the first King of the Six Kingdoms at the Starry Sept of Oldtown.",
+    "description": "Aegon I Targaryen is crowned the first King of the Seven Kingdoms at the Starry Sept of Oldtown by the High Septon.",
     "type": "Political"
   },
   {
     "id": 4,
     "year": "10 AC",
-    "title": "Dorne refuses to kneel",
-    "description": "Rhaenys Targaryen and Meraxes are shot down over Dorne. Rhaenys is captured and dies in captivity.",
+    "title": "Fall of Meraxes in Dorne",
+    "description": "Queen Rhaenys Targaryen and her dragon Meraxes are brought down over the Hellholt by a Dornish scorpion bolt. Rhaenys is captured and later dies in Dornish captivity.",
     "type": "Battle"
   },
   {
     "id": 5,
     "year": "37 AC",
     "title": "Death of Aegon I",
-    "description": "Aegon the Conqueror dies at Dragonstone. Aenys I inherits the throne.",
+    "description": "Aegon the Conqueror dies at Dragonstone from a stroke at the age of sixty-three, while telling his grandsons tales of his conquest at the Painted Table. Aenys I inherits the throne.",
     "type": "Death"
   },
   {
     "id": 6,
-    "year": "129 AC",
-    "title": "Dance of the Dragons begins",
-    "description": "Civil war erupts between Rhaenyra Targaryen and her half-brother Aegon II over the Iron Throne.",
-    "type": "War"
+    "year": "42 AC",
+    "title": "Maegor the Cruel seizes the throne",
+    "description": "Maegor I Targaryen seizes the Iron Throne upon the death of his brother Aenys I, bypassing Aenys's rightful heir. His six-year reign is defined by cruelty, religious persecution and dragon fire.",
+    "type": "Political"
   },
   {
     "id": 7,
-    "year": "130 AC",
-    "title": "The Storming of the Dragonpit",
-    "description": "A mob storms the Dragonpit in King's Landing, killing several dragons including Syrax.",
-    "type": "Battle"
+    "year": "48 AC",
+    "title": "Jaehaerys I takes the throne",
+    "description": "Jaehaerys Targaryen claims the throne after Maegor the Cruel is found dead on the Iron Throne. Begins the longest and most prosperous reign in Targaryen history — 55 years.",
+    "type": "Political"
   },
   {
     "id": 8,
-    "year": "131 AC",
-    "title": "Dance of the Dragons ends",
-    "description": "Both Aegon II and Rhaenyra die. The war ends with House Targaryen severely weakened and their dragons nearly extinct.",
-    "type": "War"
-  },
-  {
-    "id": 9,
-    "year": "298 AC",
-    "title": "Death of King Robert",
-    "description": "King Robert Baratheon dies from a hunting wound. Joffrey Baratheon ascends the Iron Throne.",
+    "year": "103 AC",
+    "title": "Death of Jaehaerys I — Viserys I crowned",
+    "description": "The Old King dies after 55 years on the throne. A Great Council had chosen his grandson Viserys I over Rhaenys Targaryen as his successor — a decision that would later fuel the Dance of the Dragons.",
     "type": "Death"
   },
   {
+    "id": 9,
+    "year": "129 AC",
+    "title": "Dance of the Dragons begins",
+    "description": "King Viserys I dies. His son Aegon II is crowned by the Greens, bypassing Viserys's named heir Rhaenyra Targaryen. Civil war erupts between the Blacks and the Greens.",
+    "type": "War"
+  },
+  {
     "id": 10,
-    "year": "299 AC",
-    "title": "Birth of the Dragons",
-    "description": "Daenerys Targaryen hatches three dragon eggs on Drogo's funeral pyre. Dragons return to the world for the first time in over a century.",
-    "type": "Dragon"
+    "year": "130 AC",
+    "title": "The Storming of the Dragonpit",
+    "description": "A mob storms the Dragonpit in King's Landing, slaying the dragons Shrykos, Morghul, Tyraxes, Dreamfyre and Syrax. Queen Helaena Targaryen throws herself from her window upon hearing the news.",
+    "type": "Battle"
   },
   {
     "id": 11,
-    "year": "305 AC",
-    "title": "The Long Night returns",
-    "description": "The Army of the Dead breaches the Wall. The Great War begins.",
+    "year": "131 AC",
+    "title": "Dance of the Dragons ends",
+    "description": "Aegon II is poisoned by his own council. Rhaenyra had already been fed to Sunfyre. The war ends with House Targaryen devastated and their dragons nearly extinct. Aegon III takes the throne.",
     "type": "War"
   },
   {
     "id": 12,
+    "year": "281 AC",
+    "title": "Robert's Rebellion begins",
+    "description": "Prince Rhaegar Targaryen abducts — or elopes with — Lyanna Stark. Her father Rickard and brother Brandon are burned alive by the Mad King Aerys II. Eddard Stark, Robert Baratheon and Jon Arryn raise their banners in rebellion.",
+    "type": "War"
+  },
+  {
+    "id": 13,
+    "year": "283 AC",
+    "title": "The Trident and the Sack of King's Landing",
+    "description": "Robert Baratheon kills Prince Rhaegar at the Battle of the Trident. Tywin Lannister sacks King's Landing. Jaime Lannister kills the Mad King Aerys II. Robert Baratheon takes the Iron Throne.",
+    "type": "Battle"
+  },
+  {
+    "id": 14,
+    "year": "298 AC",
+    "title": "Death of King Robert Baratheon",
+    "description": "King Robert Baratheon dies from a hunting wound inflicted by a boar. Joffrey Baratheon ascends the Iron Throne, secretly the son of Cersei and Jaime Lannister.",
+    "type": "Death"
+  },
+  {
+    "id": 15,
+    "year": "298 AC",
+    "title": "Birth of the Dragons",
+    "description": "Daenerys Targaryen hatches three dragon eggs on Khal Drogo's funeral pyre on the Dothraki Sea. Dragons return to the world for the first time in over 150 years.",
+    "type": "Dragon"
+  },
+  {
+    "id": 16,
+    "year": "299 AC",
+    "title": "The Red Wedding",
+    "description": "Robb Stark, his mother Catelyn, and most of his army are massacred at the Twins during the wedding feast of Edmure Tully. Guest right is violated by House Frey and House Bolton.",
+    "type": "Battle"
+  },
+  {
+    "id": 17,
+    "year": "299 AC",
+    "title": "Battle of the Blackwater",
+    "description": "Stannis Baratheon's fleet attacks King's Landing by sea. Tyrion Lannister's wildfire chain destroys much of the fleet. Tywin Lannister arrives with the Tyrell army to rout Stannis's forces.",
+    "type": "Battle"
+  },
+  {
+    "id": 18,
+    "year": "305 AC",
+    "title": "The Long Night returns — Wall breached",
+    "description": "The Night King reanimates the dragon Viserion and destroys the Wall at Eastwatch-by-the-Sea. The Army of the Dead marches south into Westeros.",
+    "type": "War"
+  },
+  {
+    "id": 19,
     "year": "305 AC",
     "title": "Battle of Winterfell",
-    "description": "The living face the dead at Winterfell. Arya Stark kills the Night King, ending the Long Night.",
+    "description": "The living face the dead at Winterfell in the longest night in living memory. Arya Stark kills the Night King with a Valyrian steel dagger, ending the Long Night and destroying the entire Army of the Dead.",
     "type": "Battle"
+  },
+  {
+    "id": 20,
+    "year": "305 AC",
+    "title": "The Burning of King's Landing",
+    "description": "Daenerys Targaryen burns King's Landing with Drogon despite the city's surrender, killing thousands of civilians. She is later killed by Jon Snow in the throne room. Bran Stark is chosen as King of the Six Kingdoms.",
+    "type": "Political"
   }
 ]

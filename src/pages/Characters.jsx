@@ -2,9 +2,11 @@ import { useState } from 'react'
 import characters from '../data/characters.json'
 import dragons from '../data/dragons.json'
 import CardModal from '../components/CardModal'
+import ConnectionsPanel from '../components/ConnectionsPanel'
 
 function Characters() {
   const [selected, setSelected] = useState(null)
+  const [connections, setConnections] = useState(null)
   const [search, setSearch] = useState('')
   const [statusFilter, setStatusFilter] = useState('all')
 
@@ -44,17 +46,7 @@ function Characters() {
           onChange={e => setSearch(e.target.value)}
           className="search-input"
         />
-        <div className="filter-btns">
-          {['all', 'alive', 'dead', 'unknown'].map(s => (
-            <button
-              key={s}
-              className={`filter-btn ${statusFilter === s ? 'active' : ''}`}
-              onClick={() => setStatusFilter(s)}
-            >
-              {s.charAt(0).toUpperCase() + s.slice(1)}
-            </button>
-          ))}
-        </div>
+        
       </div>
 
       {filtered.length === 0 && (
@@ -74,10 +66,7 @@ function Characters() {
               <p className="also-known">{character.alias}</p>
               <p><span>House:</span> {character.house}</p>
               <p><span>Dragon:</span> {getDragon(character.dragon_id)}</p>
-              <p>
-                <span>Status: </span>
-                <span className={getStatusClass(character.status)}>{character.status}</span>
-              </p>
+             
             </div>
           </div>
         ))}
@@ -95,14 +84,26 @@ function Characters() {
             <p className="also-known">{selected.alias}</p>
             <p><span>House:</span> {selected.house}</p>
             <p><span>Dragon:</span> {getDragon(selected.dragon_id)}</p>
-            <p>
-              <span>Status: </span>
-              <span className={getStatusClass(selected.status)}>{selected.status}</span>
-            </p>
+            
             <p className="description">{selected.description}</p>
+            <button
+              className="connections-btn"
+              onClick={(e) => {
+                e.stopPropagation()
+                setConnections(selected)
+                setSelected(null)
+              }}
+            >
+              View Connections →
+            </button>
           </div>
         </CardModal>
       )}
+
+      <ConnectionsPanel
+        character={connections}
+        onClose={() => setConnections(null)}
+      />
     </div>
   )
 }
