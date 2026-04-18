@@ -22,19 +22,19 @@
       "purpose": "maskable"
     }
   ],
-  "screenshots": [
-    {
-      "src": "/images/westeros-map.jpg",
-      "sizes": "1280x720",
-      "type": "image/jpeg",
-      "form_factor": "wide",
-      "label": "Maesters Codex — Map of Westeros"
-    },
-    {
-      "src": "/images/westeros-map.jpg",
-      "sizes": "1280x720",
-      "type": "image/jpeg",
-      "label": "Maesters Codex — Map of Westeros"
-    }
-  ]
+    "screenshots": [
+      {
+        "src": "/images/westeros-map.jpg",
+        "sizes": "5652x3682",
+        "type": "image/jpeg",
+        "form_factor": "wide",
+        "label": "Maesters Codex — Map of Westeros"
+      },
+      {
+        "src": "/images/westeros-map.jpg",
+        "sizes": "5652x3682",
+        "type": "image/jpeg",
+        "label": "Maesters Codex — Map of Westeros"
+      }
+    ]
 }
