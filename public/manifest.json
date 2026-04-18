@@ -2,6 +2,7 @@
   "name": "Maesters Codex",
   "short_name": "Maesters",
   "description": "A fan-made compendium of the Known World",
+  "id": "/",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#080808",
@@ -10,15 +11,30 @@
   "icons": [
     {
       "src": "/images/Logo.png",
-      "sizes": "192x192",
+      "sizes": "1024x1024",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
       "src": "/images/Logo.png",
-      "sizes": "512x512",
+      "sizes": "1024x1024",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/westeros-map.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Maesters Codex — Map of Westeros"
+    },
+    {
+      "src": "/images/westeros-map.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "label": "Maesters Codex — Map of Westeros"
     }
   ]
 }
